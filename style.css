@@ -1,0 +1,589 @@
+@font-face {
+  font-family: 'VVDSFiftiesCondensed'; /* Un nombre personalizado para tu fuente */
+  src: url('/Fonts/VVDS-Fifties-Cond-SBold-Italic.otf') format('opentype'); /* La ruta al archivo de tu fuente */
+  font-weight: bold; /* Este archivo parece ser una versión en negrita e inclinada */
+  font-style: italic; /* Específicamente inclinado, así que definimos el estilo como cursiva */
+}
+@font-face {
+  font-family: 'VVDSFifties';
+  src: url('/Fonts/VVDS-Fifties-Med-Reg.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VVDSFifties';
+  src: url('/Fonts/VVDS-Fifties-SExp-Med.otf') format('opentype');
+  font-weight: normal2;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VVDSFifties';
+  src: url('/Fonts/VVDS-Fifties-Cond-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VVDSFifties';
+  src: url('/Fonts/VVDS-Fifties-Cond-Med.otf') format('opentype');
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+}
+body {
+  font-family: 'Arial', sans-serif; /* You may want to change this */
+}
+
+
+/*------------------------------*/
+/*             Header          */
+.header {
+    display: flex;
+    align-items: center; /* Alinea los ítems verticalmente en el centro */
+    justify-content: space-between; /* Espacio entre la imagen y los botones */ /* Color de fondo */
+    padding: 0 3%; /* Espaciado a izquierda y derecha */
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 255) 50%);
+}
+
+.headerTitle{
+    height: 80%;
+    width: auto;
+}
+.header h3 {
+    color: #000; /* Adjust the color to match the exact style */
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    justify-content: center;
+}
+.header h4 {
+  font-family: 'VVDSFiftiesCondensed';
+  font-size: 3em;
+  margin: 0;
+  letter-spacing: 1.5px;
+}
+
+
+.BTNS {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Adjust spacing between buttons as necessary */
+    margin: 15px;
+}
+
+
+.headerBtn {
+  align-items: center;
+  background-color: #ffffff;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: 'VVDSFiftiesCondensed';
+  letter-spacing: 1.5px;
+  font-size: 30px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.headerBtn:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.headerBtn:hover:after {
+  transform: translate(0, 0);
+}
+
+.headerBtn:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.headerBtn:hover {
+  outline: 0;
+}
+
+/*------------------------------*/
+/*             Slogan          */
+  /* Slogan Styles */
+/* Slogan Styles */
+.sloganBody {
+  position: relative; /* Add this line */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background);
+  padding: 50px;
+  gap: 20px;
+}
+
+.sloganImage {
+  max-width: 100%; /* Make sure the image is responsive */
+  height: auto;
+  border-radius: 20px; /* Match this to the border radius of your image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow to the image */
+}
+
+.sloganText {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  max-width: 800px;
+  max-height: 380px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 1.2em;
+  padding: 1em; /* Adjust padding to ensure the content is not too close to the edges */
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 25px; /* Adjust this value to increase or decrease the roundness of the corners */
+  display: flex; /* Changed to flex to better manage the inner content */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  overflow: hidden; /* Ensures that the content respects the border-radius */
+}
+
+
+.sloganTitle {
+  background-color:  rgba(0, 0, 0, 0.45); /* Using a variable for accent color */
+  color: rgba(255, 254, 240, 0.90);
+  font-family: 'VVDSFifties', sans-serif;
+  font-weight: 500;
+  font-size: 2.2em; /* Adjust the font size as needed */
+  letter-spacing: 1.9px;
+  text-align: center;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   /* transform: translateY(-30%); Gives the impression that title is overlaying the image */
+  margin: 0 auto; /* Centers the title */
+}
+
+.slogan {
+  color: var(--color-primary);
+  font-size: 1em;
+  line-height: 1.5;
+  font-family: 'VVDSFifties', sans-serif;
+  font-weight: normal;
+  letter-spacing: 1.5px;
+}
+
+/* Responsive Design for Slogan Section */
+@media only screen and (max-width: 768px) {
+  .sloganBody {
+    flex-direction: column;
+  }
+
+  .sloganImage {
+    width: 80%; /* Adjust image size for smaller screens */
+    margin-bottom: 20px; /* Add space between image and text */
+  }
+
+  .sloganTitle {
+    font-size: 1.5em; /* Adjust title size for smaller screens */
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+    transform: translateY(0); /* Reset position for mobile */
+
+  }
+}
+/*------------------------------*/
+/*       Influencer catalogue         */
+
+.influencerSelectionBody {
+  text-align: center;
+  justify-content: center;
+  width: 100%; /* Add this line if it's not full width */
+}
+
+.influencerSelectionBody h1 {
+  font-family: 'VVDSFifties', sans-serif;
+  font-weight: 500;
+  font-size: 3em; /* Adjust the font size as needed */
+  letter-spacing: 1.9px;
+}
+
+.selectDescription {
+  color: var(--color-primary);
+  font-size: 1.5em;
+  line-height: 1.5;
+  font-family: 'VVDSFifties', sans-serif;
+  font-weight: normal;
+  letter-spacing: 1.5px;
+  width: 70%;
+  margin: 0 auto; /* Center the paragraph */
+  text-align: center;
+}
+
+.influencerCardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    justify-content: center;
+    padding: 20px;
+}
+
+/*------------------------------*/
+/*       Influencer catalogue         */
+
+.card {
+    background-color: #fff; /* White background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Smoother shadow */
+    padding: 20px;
+    width: 300px; /* Card width */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    overflow: hidden; /* Ensures that content respects border-radius */
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Scales the card up to 105% */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Larger shadow for lifting effect */
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 15px; /* Rounded corners for the image */
+    border-top-right-radius: 15px;
+}
+
+.card-name {
+    font-family: 'Arial', sans-serif; /* Elegant font */
+    font-size: 1.5em;
+    color: #333; /* Dark gray for high contrast */
+    margin: 10px 0;
+    font-family: 'VVDSFifties', sans-serif;
+    font-weight: 500;
+    font-size: 2.2em; /* Adjust the font size as needed */
+    letter-spacing: 1.9px;
+}
+
+.card-title {
+    background: linear-gradient(120deg, #ffffff 0%, #f9ed00 100%);
+    color: #000000;
+    padding: 5px 0;
+    font-family: 'VVDSFifties', sans-serif;
+    font-weight: normal;
+    font-size: 1.2em; /* Adjust the font size as needed */
+    letter-spacing: 1.9px;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-price {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px; /* Spacing before the button */
+}
+
+.button-buy {
+  background-color: #c0c0c096;
+  border: 2.5px solid #000000;
+  border-radius: 30px;
+  box-shadow: #141414 4px 4px 0 0;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 30 px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: background-color 0.3s;
+  font-family: 'VVDSFiftiesCondensed';
+  font-size: 3em;
+  letter-spacing: 1.8px;
+  width: 80%;
+  align-self: center;
+}
+
+.button-buy:hover {
+  background-color: #00aff7;
+}
+
+.button-buy:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+#sophieBtn:hover {
+  background-color: #fa57be;
+}
+#jayBtn:hover{
+  background-color: #0071fe;
+}
+#leonardBtn:hover{
+  background-color: #ecf912;
+}
+#lolaBtn:hover{
+  background-color: #fda62f;
+}
+
+#sashaBtn:hover{
+  background-color: #fa0083;
+}
+#ryzoBtn:hover{
+  background-color: #faee00;
+}
+#ryzoBtn:hover{
+  background-color: #faee00;
+}
+#stuartBtn:hover{
+  background-color: #f88f01;
+}
+#amaraBtn:hover{
+  background-color: #fc8c7a;
+}
+#kaiBtn:hover{
+  background-color: #00b9fc;
+}
+#yusufBtn:hover{
+  background-color: #fdd621;
+}
+#loisBtn:hover{
+  background-color: #e77d5b;
+}
+
+
+
+#sophieText{
+  background: linear-gradient(120deg, #ffffff 0%, #fa57be 100%);
+}
+#jayText{
+  background: linear-gradient(120deg, #ffffff 0%, #0071fe 100%);
+}
+
+#leonardText{
+  background: linear-gradient(120deg, #ffffff 0%, #ecf912 100%);
+}
+#lolaText{
+  background: linear-gradient(120deg, #ffffff 0%, #fda62f 100%);
+}
+
+#sashaText{
+  background: linear-gradient(120deg, #ffffff 0%, #fa0083 100%);
+}
+#ryzoText{
+  background: linear-gradient(120deg, #ffffff 0%, #faee00 100%);
+}
+#ryzoText{
+  background: linear-gradient(120deg, #ffffff 0%, #faee00 100%);
+}
+#stuartText{
+  background: linear-gradient(120deg, #ffffff 0%, #f88f01 100%);
+}
+#amaraText{
+  background: linear-gradient(120deg, #ffffff 0%, #fc8c7a 100%);
+}
+#kaiText{
+  background: linear-gradient(120deg, #ffffff 0%, #00b9fc 100%);
+}
+#yusufText{
+  background: linear-gradient(120deg, #ffffff 0%, #fdd621 100%);
+}
+#richardText{
+  background: linear-gradient(120deg, #ffffff 0%, #00aff7 100%);
+}
+#loisText{
+  background: linear-gradient(120deg, #ffffff 0%, #e77d5b 100%);
+}
+
+
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+
+/*------------------------------*/
+/*       About         */
+.aboutSection {
+  background-image: url('SloganImage_.png');
+  background-size: cover;
+  background-position: center;
+  padding: 50px; /* Adjust padding as needed */
+  border-radius: 20px; /* Match the border-radius in your design */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+  background-position: 70% center
+}
+
+.aboutContent {
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  border-radius: 15px; /* Adjust to match your design */
+  padding: 20px; /* Adjust padding as needed */
+  max-width: 800px; /* Adjust width as needed */
+  margin: 0 0; /* Center the content */
+  justify-content: left;
+}
+
+
+
+.aboutContent h1 {
+  color: #000; /* Adjust text color as needed */
+  text-align: center; /* Center the heading */
+  margin-bottom: 20px; /* Space below the heading */
+  text-transform: uppercase; /* Uppercase letters */
+  letter-spacing: 2px; /* Spacing between letters */
+  transition: background-color 0.3s;
+  font-family: 'VVDSFiftiesCondensed';
+  font-size: 3em;
+  letter-spacing: 1.8px;
+}
+
+.aboutContent p {
+  font-family: 'VVDSFifties', sans-serif;
+  font-weight: normal2;
+  letter-spacing: 1.3px;
+}
+
+.aboutContent h2 {
+  font-family: 'VVDSFiftiesCondensed', sans-serif;
+  letter-spacing: 1.3px;
+}
+
+
+
+<!-- HTML !-->
+<button class="button-56" role="button">Button 56</button>
+
+
+
+
+/*------------------------------*/
+/*       FAQs         */
+/* Estilo base para FAQ */
+/* Base styling for FAQ section */
+.FAQBody {
+  background-color: #fff; /* Neutral background for a clean look */
+  padding: 2rem;
+  border-radius: 8px; /* Soften the edges */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Add depth with a subtle shadow */
+  max-width: 800px; /* Set a max width for the container */
+  margin: 2rem auto; /* Center it with automatic margins */
+  font-family: 'Arial', sans-serif; /* You can switch this to a font of your choice */
+}
+
+/* Style for individual question items */
+.FAQQuestion {
+  background-color: #f7f7f7; /* Light background to differentiate the question */
+  margin: 0.5rem 0;
+  padding: 1rem;
+  cursor: pointer;
+  position: relative;
+  border-radius: 4px; /* Slight rounding of corners */
+  transition: background-color 0.3s ease;
+  border-left: 4px solid #007bff; /* Add a colored border for a touch of color */
+  font-weight: 600;
+  font-family: 'VVDSFiftiesCondensed', sans-serif;
+  letter-spacing: 1.3px;
+}
+
+/* Questions have a hover effect for interactivity */
+.FAQQuestion:hover {
+  background-color: #e7e7e7;
+}
+
+/* Style for the answer content */
+.FAQAnswer {
+  background-color: #ffffff; /* White background for the answers */
+  padding: 0 1rem 1rem;
+  display: none; /* Hidden by default */
+  border-bottom-left-radius: 4px; /* Rounded bottom corners */
+  border-bottom-right-radius: 4px;
+  font-family: 'VVDSFifties', sans-serif;
+  font-weight: normal2;
+  letter-spacing: 1.3px;
+}
+
+/* The plus/minus icon */
+.FAQQuestion::after {
+  content: '\002B'; /* Unicode for the plus sign */
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Style the plus icon when the question is active (i.e., answer is visible) */
+.FAQQuestion.active::after {
+  content: '\2212'; /* Unicode for the minus sign */
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Add some hover effects and transition for the FAQ items */
+.FAQQuestion:not(:last-child) {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.FAQList {
+  list-style-type: none; /* Removes the default list style */
+  padding: 0; /* Reset padding */
+}
+
+/* Extra visual tweaks for cleaner design */
+.FAQBody h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1rem;
+  font-family: 'VVDSFiftiesCondensed', sans-serif;
+  letter-spacing: 1.3px;
+}
+
+.FAQBody p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+}
+.aboutContent p {
+  font-family: 'VVDSFifties', sans-serif;
+  font-weight: normal2;
+  letter-spacing: 1.3px;
+}
+
+.aboutContent h2 {
+  font-family: 'VVDSFiftiesCondensed', sans-serif;
+  letter-spacing: 1.3px;
+}

@@ -1,0 +1,269 @@
+@font-face {
+  font-family: 'VVDSFiftiesCondensed'; /* Un nombre personalizado para tu fuente */
+  src: url('/Fonts/VVDS-Fifties-Cond-SBold-Italic.otf') format('opentype'); /* La ruta al archivo de tu fuente */
+  font-weight: bold; /* Este archivo parece ser una versión en negrita e inclinada */
+  font-style: italic; /* Específicamente inclinado, así que definimos el estilo como cursiva */
+}
+@font-face {
+  font-family: 'VVDSFifties';
+  src: url('/Fonts/VVDS-Fifties-Med-Reg.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VVDSFifties';
+  src: url('/Fonts/VVDS-Fifties-SExp-Med.otf') format('opentype');
+  font-weight: normal2;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VVDSFifties';
+  src: url('/Fonts/VVDS-Fifties-Cond-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VVDSFifties';
+  src: url('/Fonts/VVDS-Fifties-Cond-Med.otf') format('opentype');
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+}
+
+
+/*------------------------------*/
+/*             Header          */
+.header {
+  display: flex;
+  align-items: center; /* Alinea los ítems verticalmente en el centro */
+  justify-content: space-between; /* Espacio entre la imagen y los botones */ /* Color de fondo */
+  padding: 0 3%; /* Espaciado a izquierda y derecha */
+}
+
+.headerTitle{
+  height: 80%;
+  width: auto;
+}
+.header h3 {
+  color: #000; /* Adjust the color to match the exact style */
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+  justify-content: center;
+}
+.header h4 {
+font-family: 'VVDSFiftiesCondensed';
+font-size: 3em;
+margin: 0;
+letter-spacing: 1.5px;
+}
+
+
+.BTNS {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Adjust spacing between buttons as necessary */
+  margin: 15px;
+}
+
+
+.headerBtn {
+align-items: center;
+background-color: #ffffff;
+border: 2px solid #111;
+border-radius: 8px;
+box-sizing: border-box;
+color: #111;
+cursor: pointer;
+display: flex;
+font-family: 'VVDSFiftiesCondensed';
+letter-spacing: 1.5px;
+font-size: 30px;
+height: 48px;
+justify-content: center;
+line-height: 24px;
+max-width: 100%;
+padding: 0 25px;
+position: relative;
+text-align: center;
+text-decoration: none;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+}
+
+.headerBtn:after {
+background-color: #111;
+border-radius: 8px;
+content: "";
+display: block;
+height: 48px;
+left: 0;
+width: 100%;
+position: absolute;
+top: -2px;
+transform: translate(8px, 8px);
+transition: transform .2s ease-out;
+z-index: -1;
+}
+
+.headerBtn:hover:after {
+transform: translate(0, 0);
+}
+
+.headerBtn:active {
+background-color: #ffdeda;
+outline: 0;
+}
+
+.headerBtn:hover {
+outline: 0;
+}
+
+/*------------------------------*/
+
+
+  main {
+      font-family: 'Arial', sans-serif;
+      font-size: 16px; /* Base font size */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items:start;
+      min-height: 100vh;
+      margin-top: 5%;
+    }
+  
+  .profile-card {
+    background: #f0f0f0;
+    border-radius: 20px;
+    padding: 40px;
+    width: 85vw; /* Responsive width based on the viewport */
+    height: auto;
+    max-width: 1200px; /* Maximum width */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 4%;
+  }
+  
+  .profile-image img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 35vw; /* Responsive image size */
+    max-width: 500px; /* Maximum image size */
+    height: auto;
+  }
+  
+  .profile-content {
+    max-width: 60%; /* Maximum content width */
+  }
+  .profile-content h1 {
+    font-size: 4.5rem;/* Maximum content width */
+    margin-bottom: 0px;
+  }
+  .profile-content .profile-description {
+    margin-top: 5px;
+    font-size: 1.5rem;/* Maximum content width */
+  }
+  
+  .profile-name {
+    font-size: 3rem; /* Larger text */
+    color: #333;
+    margin-bottom: 0.5em;
+    font-family: 'VVDSFifties', sans-serif;
+    font-weight: bold;
+    font-size: 2.2em; /* Adjust the font size as needed */
+    letter-spacing: 2.8px;
+  }
+  
+  .profile-description {
+    font-size: 1.5rem; /* Larger paragraph text */
+    color: #666;
+    margin-bottom: 1em;
+    font-family: 'VVDSFifties', sans-serif;
+    font-weight: normal;
+    letter-spacing: 1.5px;
+  }
+  .full-description{
+    font-family: 'VVDSFifties', sans-serif;
+    font-weight: normal;
+    letter-spacing: 1.5px;
+  }
+  .randomDiv{
+    background-color: #0a4a8d;
+    height: 30px;
+    width: 100%;
+  }
+  
+  .profile-buttons {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+  }
+  .BTN {
+    background-color: #c0c0c096;
+    border: 2.5px solid #000000;
+    border-radius: 30px;
+    box-shadow: #141414 4px 4px 0 0;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 30 px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    transition: background-color 0.3s;
+    font-family: 'VVDSFiftiesCondensed';
+    font-size: 2em;
+    letter-spacing: 1.8px;
+    width: 33%;
+    align-self: center;
+  }
+
+  .BTN:hover {
+    background-color: #00aff7;
+  }
+  
+  .BTN:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+  }
+
+
+  /* Media queries to adjust layout on smaller screens */
+  @media (max-width: 768px) {
+    .profile-card {
+      flex-direction: column;
+      padding: 20px;
+    }
+    .profile-image img {
+      width: 80vw;
+      max-width: 350px;
+    }
+    .profile-content {
+      max-width: 100%;
+    }
+    .profile-name {
+      font-size: 2.5rem;
+    }
+    .profile-description {
+      font-size: 1.2rem;
+    }
+    .profile-buttons {
+      font-size: 1.2rem;
+      padding: 0.8em 1.6em;
+    }
+  }
+  

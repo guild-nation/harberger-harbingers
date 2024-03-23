@@ -1,0 +1,41 @@
+.sloganBody {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #eceff1; /* Adjust the background color to match your design */
+    padding: 50px; /* Add more padding as needed */
+    gap: 20px; /* Space between image and text */
+}
+
+#SloganImage_ {
+    max-width: 200px; /* Adjust according to your design */
+    height: auto;
+    border-radius: 20px; /* Match this to the border radius of your image */
+}
+
+.sloganText {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px; /* Set a max-width for the text */
+}
+
+.sloganTitle {
+    background-color: #FF1654; /* Example bright color, adjust as needed */
+    color: #FFFFFF; /* White text color */
+    font-size: 1.5em; /* Adjust the font size as needed */
+    font-weight: bold; /* Bold font */
+    text-align: center; /* Center the text */
+    padding: 10px 20px; /* Top and Bottom, Left and Right padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+    width: fit-content; /* Adjust width to fit the content */
+    margin: 0 auto; /* Center the title box */
+    text-transform: uppercase; /* Uppercase letters */
+}
+
+
+.slogan {
+    color: #333;
+    font-size: 1em;
+    line-height: 1.5; /* Adjust line spacing for better readability */
+}
