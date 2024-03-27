@@ -1,80 +1,81 @@
 @font-face {
-  font-family: 'VVDSFiftiesCondensed'; /* Un nombre personalizado para tu fuente */
-  src: url('/Fonts/VVDS-Fifties-Cond-SBold-Italic.otf') format('opentype'); /* La ruta al archivo de tu fuente */
+  font-family: "VVDSFiftiesCondensed"; /* Un nombre personalizado para tu fuente */
+  src: url("/Fonts/VVDS-Fifties-Cond-SBold-Italic.otf") format("opentype"); /* La ruta al archivo de tu fuente */
   font-weight: bold; /* Este archivo parece ser una versión en negrita e inclinada */
   font-style: italic; /* Específicamente inclinado, así que definimos el estilo como cursiva */
 }
 @font-face {
-  font-family: 'VVDSFifties';
-  src: url('/Fonts/VVDS-Fifties-Med-Reg.otf') format('opentype');
+  font-family: "VVDSFifties";
+  src: url("/Fonts/VVDS-Fifties-Med-Reg.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'VVDSFifties';
-  src: url('/Fonts/VVDS-Fifties-SExp-Med.otf') format('opentype');
+  font-family: "VVDSFifties";
+  src: url("/Fonts/VVDS-Fifties-SExp-Med.otf") format("opentype");
   font-weight: normal2;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'VVDSFifties';
-  src: url('/Fonts/VVDS-Fifties-Cond-Bold.otf') format('opentype');
+  font-family: "VVDSFifties";
+  src: url("/Fonts/VVDS-Fifties-Cond-Bold.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'VVDSFifties';
-  src: url('/Fonts/VVDS-Fifties-Cond-Med.otf') format('opentype');
+  font-family: "VVDSFifties";
+  src: url("/Fonts/VVDS-Fifties-Cond-Med.otf") format("opentype");
   font-weight: 500; /* Medium weight */
   font-style: normal;
 }
 body {
-  font-family: 'Arial', sans-serif; /* You may want to change this */
+  font-family: "Arial", sans-serif; /* You may want to change this */
 }
-
 
 /*------------------------------*/
 /*             Header          */
 .header {
-    display: flex;
-    align-items: center; /* Alinea los ítems verticalmente en el centro */
-    justify-content: space-between; /* Espacio entre la imagen y los botones */ /* Color de fondo */
-    padding: 0 3%; /* Espaciado a izquierda y derecha */
-    position: sticky;
-    top: 0;
-    z-index: 20;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 255) 50%);
+  display: flex;
+  align-items: center; /* Alinea los ítems verticalmente en el centro */
+  justify-content: space-between; /* Espacio entre la imagen y los botones */ /* Color de fondo */
+  padding: 0 3%; /* Espaciado a izquierda y derecha */
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 255) 50%
+  );
 }
 
-.headerTitle{
-    height: 80%;
-    width: auto;
+.headerTitle {
+  height: 80%;
+  width: auto;
 }
 .header h3 {
-    color: #000; /* Adjust the color to match the exact style */
-    margin: 0;
-    padding: 20px 0;
-    text-align: center;
-    justify-content: center;
+  color: #000; /* Adjust the color to match the exact style */
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+  justify-content: center;
 }
 .header h4 {
-  font-family: 'VVDSFiftiesCondensed';
+  font-family: "VVDSFiftiesCondensed";
   font-size: 3em;
   margin: 0;
   letter-spacing: 1.5px;
 }
 
-
 .BTNS {
-    display: flex;
-    justify-content: center;
-    gap: 30px; /* Adjust spacing between buttons as necessary */
-    margin: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Adjust spacing between buttons as necessary */
+  margin: 15px;
 }
-
 
 .headerBtn {
   align-items: center;
@@ -85,7 +86,7 @@ body {
   color: #111;
   cursor: pointer;
   display: flex;
-  font-family: 'VVDSFiftiesCondensed';
+  font-family: "VVDSFiftiesCondensed";
   letter-spacing: 1.5px;
   font-size: 30px;
   height: 48px;
@@ -112,7 +113,7 @@ body {
   position: absolute;
   top: -2px;
   transform: translate(8px, 8px);
-  transition: transform .2s ease-out;
+  transition: transform 0.2s ease-out;
   z-index: -1;
 }
 
@@ -131,7 +132,7 @@ body {
 
 /*------------------------------*/
 /*             Slogan          */
-  /* Slogan Styles */
+/* Slogan Styles */
 /* Slogan Styles */
 .sloganBody {
   position: relative; /* Add this line */
@@ -159,7 +160,7 @@ body {
   max-width: 800px;
   max-height: 380px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 1.2em;
   padding: 1em; /* Adjust padding to ensure the content is not too close to the edges */
   background-color: rgba(0, 0, 0, 0.7);
@@ -171,11 +172,10 @@ body {
   overflow: hidden; /* Ensures that the content respects the border-radius */
 }
 
-
 .sloganTitle {
-  background-color:  rgba(0, 0, 0, 0.45); /* Using a variable for accent color */
-  color: rgba(255, 254, 240, 0.90);
-  font-family: 'VVDSFifties', sans-serif;
+  background-color: rgba(0, 0, 0, 0.45); /* Using a variable for accent color */
+  color: rgba(255, 254, 240, 0.9);
+  font-family: "VVDSFifties", sans-serif;
   font-weight: 500;
   font-size: 2.2em; /* Adjust the font size as needed */
   letter-spacing: 1.9px;
@@ -183,7 +183,7 @@ body {
   padding: 20px 40px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-   /* transform: translateY(-30%); Gives the impression that title is overlaying the image */
+  /* transform: translateY(-30%); Gives the impression that title is overlaying the image */
   margin: 0 auto; /* Centers the title */
 }
 
@@ -191,7 +191,7 @@ body {
   color: var(--color-primary);
   font-size: 1em;
   line-height: 1.5;
-  font-family: 'VVDSFifties', sans-serif;
+  font-family: "VVDSFifties", sans-serif;
   font-weight: normal;
   letter-spacing: 1.5px;
 }
@@ -211,7 +211,6 @@ body {
     font-size: 1.5em; /* Adjust title size for smaller screens */
     padding: 10px 20px; /* Adjust padding for smaller screens */
     transform: translateY(0); /* Reset position for mobile */
-
   }
 }
 /*------------------------------*/
@@ -224,7 +223,7 @@ body {
 }
 
 .influencerSelectionBody h1 {
-  font-family: 'VVDSFifties', sans-serif;
+  font-family: "VVDSFifties", sans-serif;
   font-weight: 500;
   font-size: 3em; /* Adjust the font size as needed */
   letter-spacing: 1.9px;
@@ -234,7 +233,7 @@ body {
   color: var(--color-primary);
   font-size: 1.5em;
   line-height: 1.5;
-  font-family: 'VVDSFifties', sans-serif;
+  font-family: "VVDSFifties", sans-serif;
   font-weight: normal;
   letter-spacing: 1.5px;
   width: 70%;
@@ -243,59 +242,59 @@ body {
 }
 
 .influencerCardsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Space between cards */
-    justify-content: center;
-    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  justify-content: center;
+  padding: 20px;
 }
 
 /*------------------------------*/
 /*       Influencer catalogue         */
 
 .card {
-    background-color: #fff; /* White background */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Smoother shadow */
-    padding: 20px;
-    width: 300px; /* Card width */
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
-    overflow: hidden; /* Ensures that content respects border-radius */
-    cursor: pointer;
+  background-color: #fff; /* White background */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Smoother shadow */
+  padding: 20px;
+  width: 300px; /* Card width */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  overflow: hidden; /* Ensures that content respects border-radius */
+  cursor: pointer;
 }
 
 .card:hover {
-    transform: scale(1.05); /* Scales the card up to 105% */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Larger shadow for lifting effect */
+  transform: scale(1.05); /* Scales the card up to 105% */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Larger shadow for lifting effect */
 }
 
 .card-image {
-    width: 100%;
-    height: auto;
-    border-top-left-radius: 15px; /* Rounded corners for the image */
-    border-top-right-radius: 15px;
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 15px; /* Rounded corners for the image */
+  border-top-right-radius: 15px;
 }
 
 .card-name {
-    font-family: 'Arial', sans-serif; /* Elegant font */
-    font-size: 1.5em;
-    color: #333; /* Dark gray for high contrast */
-    margin: 10px 0;
-    font-family: 'VVDSFifties', sans-serif;
-    font-weight: 500;
-    font-size: 2.2em; /* Adjust the font size as needed */
-    letter-spacing: 1.9px;
+  font-family: "Arial", sans-serif; /* Elegant font */
+  font-size: 1.5em;
+  color: #333; /* Dark gray for high contrast */
+  margin: 10px 0;
+  font-family: "VVDSFifties", sans-serif;
+  font-weight: 500;
+  font-size: 2.2em; /* Adjust the font size as needed */
+  letter-spacing: 1.9px;
 }
 
 .card-title {
-    background: linear-gradient(120deg, #ffffff 0%, #f9ed00 100%);
-    color: #000000;
-    padding: 5px 0;
-    font-family: 'VVDSFifties', sans-serif;
-    font-weight: normal;
-    font-size: 1.2em; /* Adjust the font size as needed */
-    letter-spacing: 1.9px;
+  background: linear-gradient(120deg, #ffffff 0%, #f9ed00 100%);
+  color: #000000;
+  padding: 5px 0;
+  font-family: "VVDSFifties", sans-serif;
+  font-weight: normal;
+  font-size: 1.2em; /* Adjust the font size as needed */
+  letter-spacing: 1.9px;
 }
 
 .card-details {
@@ -305,9 +304,9 @@ body {
 }
 
 .card-price {
-    font-size: 1.2em;
-    color: #333;
-    margin-bottom: 20px; /* Spacing before the button */
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 20px; /* Spacing before the button */
 }
 
 .button-buy {
@@ -328,7 +327,7 @@ body {
   -webkit-user-select: none;
   touch-action: manipulation;
   transition: background-color 0.3s;
-  font-family: 'VVDSFiftiesCondensed';
+  font-family: "VVDSFiftiesCondensed";
   font-size: 3em;
   letter-spacing: 1.8px;
   width: 80%;
@@ -347,86 +346,82 @@ body {
 #sophieBtn:hover {
   background-color: #fa57be;
 }
-#jayBtn:hover{
+#jayBtn:hover {
   background-color: #0071fe;
 }
-#leonardBtn:hover{
+#leonardBtn:hover {
   background-color: #ecf912;
 }
-#lolaBtn:hover{
+#lolaBtn:hover {
   background-color: #fda62f;
 }
 
-#sashaBtn:hover{
+#sashaBtn:hover {
   background-color: #fa0083;
 }
-#ryzoBtn:hover{
+#ryzoBtn:hover {
   background-color: #faee00;
 }
-#ryzoBtn:hover{
+#ryzoBtn:hover {
   background-color: #faee00;
 }
-#stuartBtn:hover{
+#stuartBtn:hover {
   background-color: #f88f01;
 }
-#amaraBtn:hover{
+#amaraBtn:hover {
   background-color: #fc8c7a;
 }
-#kaiBtn:hover{
+#kaiBtn:hover {
   background-color: #00b9fc;
 }
-#yusufBtn:hover{
+#yusufBtn:hover {
   background-color: #fdd621;
 }
-#loisBtn:hover{
+#loisBtn:hover {
   background-color: #e77d5b;
 }
 
-
-
-#sophieText{
+#sophieText {
   background: linear-gradient(120deg, #ffffff 0%, #fa57be 100%);
 }
-#jayText{
+#jayText {
   background: linear-gradient(120deg, #ffffff 0%, #0071fe 100%);
 }
 
-#leonardText{
+#leonardText {
   background: linear-gradient(120deg, #ffffff 0%, #ecf912 100%);
 }
-#lolaText{
+#lolaText {
   background: linear-gradient(120deg, #ffffff 0%, #fda62f 100%);
 }
 
-#sashaText{
+#sashaText {
   background: linear-gradient(120deg, #ffffff 0%, #fa0083 100%);
 }
-#ryzoText{
+#ryzoText {
   background: linear-gradient(120deg, #ffffff 0%, #faee00 100%);
 }
-#ryzoText{
+#ryzoText {
   background: linear-gradient(120deg, #ffffff 0%, #faee00 100%);
 }
-#stuartText{
+#stuartText {
   background: linear-gradient(120deg, #ffffff 0%, #f88f01 100%);
 }
-#amaraText{
+#amaraText {
   background: linear-gradient(120deg, #ffffff 0%, #fc8c7a 100%);
 }
-#kaiText{
+#kaiText {
   background: linear-gradient(120deg, #ffffff 0%, #00b9fc 100%);
 }
-#yusufText{
+#yusufText {
   background: linear-gradient(120deg, #ffffff 0%, #fdd621 100%);
 }
-#richardText{
+#richardText {
   background: linear-gradient(120deg, #ffffff 0%, #00aff7 100%);
 }
-#loisText{
+#loisText {
   background: linear-gradient(120deg, #ffffff 0%, #e77d5b 100%);
 }
-
-
 
 @media (min-width: 768px) {
   .button-74 {
@@ -435,17 +430,16 @@ body {
   }
 }
 
-
 /*------------------------------*/
 /*       About         */
 .aboutSection {
-  background-image: url('SloganImage_.png');
+  background-image: url("/SloganImage_.png");
   background-size: cover;
   background-position: center;
   padding: 50px; /* Adjust padding as needed */
   border-radius: 20px; /* Match the border-radius in your design */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
-  background-position: 70% center
+  background-position: 70% center;
 }
 
 .aboutContent {
@@ -457,8 +451,6 @@ body {
   justify-content: left;
 }
 
-
-
 .aboutContent h1 {
   color: #000; /* Adjust text color as needed */
   text-align: center; /* Center the heading */
@@ -466,23 +458,21 @@ body {
   text-transform: uppercase; /* Uppercase letters */
   letter-spacing: 2px; /* Spacing between letters */
   transition: background-color 0.3s;
-  font-family: 'VVDSFiftiesCondensed';
+  font-family: "VVDSFiftiesCondensed";
   font-size: 3em;
   letter-spacing: 1.8px;
 }
 
 .aboutContent p {
-  font-family: 'VVDSFifties', sans-serif;
+  font-family: "VVDSFifties", sans-serif;
   font-weight: normal2;
   letter-spacing: 1.3px;
 }
 
 .aboutContent h2 {
-  font-family: 'VVDSFiftiesCondensed', sans-serif;
+  font-family: "VVDSFiftiesCondensed", sans-serif;
   letter-spacing: 1.3px;
 }
-
-
 
 <!-- HTML !-->
 <button class="button-56" role="button">Button 56</button>
@@ -498,10 +488,10 @@ body {
   background-color: #fff; /* Neutral background for a clean look */
   padding: 2rem;
   border-radius: 8px; /* Soften the edges */
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Add depth with a subtle shadow */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Add depth with a subtle shadow */
   max-width: 800px; /* Set a max width for the container */
   margin: 2rem auto; /* Center it with automatic margins */
-  font-family: 'Arial', sans-serif; /* You can switch this to a font of your choice */
+  font-family: "Arial", sans-serif; /* You can switch this to a font of your choice */
 }
 
 /* Style for individual question items */
@@ -515,7 +505,7 @@ body {
   transition: background-color 0.3s ease;
   border-left: 4px solid #007bff; /* Add a colored border for a touch of color */
   font-weight: 600;
-  font-family: 'VVDSFiftiesCondensed', sans-serif;
+  font-family: "VVDSFiftiesCondensed", sans-serif;
   letter-spacing: 1.3px;
 }
 
@@ -531,14 +521,14 @@ body {
   display: none; /* Hidden by default */
   border-bottom-left-radius: 4px; /* Rounded bottom corners */
   border-bottom-right-radius: 4px;
-  font-family: 'VVDSFifties', sans-serif;
+  font-family: "VVDSFifties", sans-serif;
   font-weight: normal2;
   letter-spacing: 1.3px;
 }
 
 /* The plus/minus icon */
 .FAQQuestion::after {
-  content: '\002B'; /* Unicode for the plus sign */
+  content: "\002B"; /* Unicode for the plus sign */
   font-size: 1.5rem;
   position: absolute;
   right: 1rem;
@@ -549,7 +539,7 @@ body {
 
 /* Style the plus icon when the question is active (i.e., answer is visible) */
 .FAQQuestion.active::after {
-  content: '\2212'; /* Unicode for the minus sign */
+  content: "\2212"; /* Unicode for the minus sign */
   transform: translateY(-50%) rotate(180deg);
 }
 
@@ -568,7 +558,7 @@ body {
   text-align: center;
   color: #333;
   margin-bottom: 1rem;
-  font-family: 'VVDSFiftiesCondensed', sans-serif;
+  font-family: "VVDSFiftiesCondensed", sans-serif;
   letter-spacing: 1.3px;
 }
 
@@ -578,12 +568,12 @@ body {
   margin-bottom: 2rem;
 }
 .aboutContent p {
-  font-family: 'VVDSFifties', sans-serif;
+  font-family: "VVDSFifties", sans-serif;
   font-weight: normal2;
   letter-spacing: 1.3px;
 }
 
 .aboutContent h2 {
-  font-family: 'VVDSFiftiesCondensed', sans-serif;
+  font-family: "VVDSFiftiesCondensed", sans-serif;
   letter-spacing: 1.3px;
 }

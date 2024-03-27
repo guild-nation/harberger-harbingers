@@ -1,219 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Harberger</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
-    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <script
+      src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+      type="application/javascript"
+    ></script>
     <script src="js/script.js" type="text/javascript"></script>
-</head>
-<body onload="init()">
+  </head>
+  <body onload="init()">
     <div class="main">
-<!--                  Header                    -->
-        <div class="header">
-            <h4>HarbergerBid</h4>
-            <div class="BTNS">
-                <button class="headerBtn" id="btnAbout">About</button>
-                <button class="headerBtn" id="btnFAQ">FAQ</button>
-                <button class="headerBtn" id="btnConnect" onclick="connect()">Connect</button>
-            </div>
+      <!--                  Header                    -->
+      <div class="header">
+        <h4>HarbergerBid</h4>
+        <div class="BTNS">
+          <button class="headerBtn" id="btnAbout">About</button>
+          <button class="headerBtn" id="btnFAQ">FAQ</button>
+          <button class="headerBtn" id="btnConnect" onclick="connect()">
+            Connect
+          </button>
         </div>
+      </div>
 
-<!--                  Body                    -->
+      <!--                  Body                    -->
 
-        <div class="mainBody">
-            <!--        -----------------------        -->
-            <!--        Slogan + Main Image        -->
-            <div class="sloganBody">
-                <img src="slogan.png" class="sloganImage" id="SloganImage_" alt="Project Pic">
-                <div class="sloganText">
-                    <div class="sloganTitle">Harness Influence, Shape the Conversation</div>
-                    <p class="slogan">Hold NFTs tied to leading warpcast influencers, offering you the opportunity to manage their social media account. These NFTs stand out as they are perpetually available for purchase due to the Harberger tax system.</p>
-                </div>
+      <div class="mainBody">
+        <!--        -----------------------        -->
+        <!--        Slogan + Main Image        -->
+        <div class="sloganBody">
+          <img
+            src="/slogan.png"
+            class="sloganImage"
+            id="SloganImage_"
+            alt="Project Pic"
+          />
+          <div class="sloganText">
+            <div class="sloganTitle">
+              Harness Influence, Shape the Conversation
             </div>
-            <!--        -----------------------        -->
-            <!--        Influencers Catalogue         -->
-            <div class="influencerSelectionBody">
-                <h1>Choose your influencer</h1>
-                <p class="selectDescription"> Select Your Sphere of Influence. From tech visionaries to fitness gurus, find the influencer whose voice speaks to you—and bid to make it your own.</p>
-                <div class="influencerCardsContainer">
-                    <div class="card">
-                        <img src="/Influencers/Gaming.png" alt="Richard" class="card-image">
-                        <h3 class="card-name">Sophie</h3>
-                        <p class="card-title" id="sophieText">The Gamer Girl</p>
-                        <div class="card-details">
-                            <span id="price-1">Current market price: ~ ETH</span>
-                            <button class="button-buy"onclick="acquire(1)"> Buy </button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="/Influencers/Tech.png" alt="Richard" class="card-image">
-                        <h3 class="card-name">Jay</h3>
-                        <p class="card-title" id="jayText">The tech head</p>
-                        <div class="card-details">
-                            <span id="price-2">Current market price: ~ ETH</span>
-                            <button class="button-buy" onclick="acquire(2)"> Buy </button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="/Influencers/Apocaliptic.png" alt="Richard" class="card-image">
-                        <h3 class="card-name">Leonard</h3>
-                        <p class="card-title" id="leonardText">The survival maximalist</p>
-                        <div class="card-details">
-                            <span id="price-3">Current market price: ~ ETH</span>
-                            <button class="button-buy" onclick="acquire(3)"> Buy </button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="/Influencers/Waifu.png" alt="Richard" class="card-image">
-                        <h3 class="card-name">Lola</h3>
-                        <p class="card-title" id="lolaText">The Model</p>
-                        <div class="card-details">
-                            <span id="price-4">Current market price: ~ ETH</span>
-                            <button class="button-buy"onclick="acquire(4)"> Buy </button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="/Influencers/TechFemale.png" alt="Richard" class="card-image">
-                        <h3 class="card-name">Sasha</h3>
-                        <p class="card-title" id="sashaText">The Tech influencer</p>
-                        <div class="card-details">
-                            <span id="price-5">Current market price: ~ ETH</span>
-                            <button class="button-buy"onclick="acquire(5)"> Buy </button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="/Influencers/Tradfi.png" alt="Richard" class="card-image">
-                        <h3 class="card-name">Richard</h3>
-                        <p class="card-title" id="richardText">The tradfi uncle</p>
-                        <div class="card-details">
-                            <span id="price-6">Current market price: ~ ETH</span>
-                            <button class="button-buy"onclick="acquire(6)"> Buy </button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="/Influencers/DegenMale.png" alt="Richard" class="card-image">
-                        <h3 class="card-name">Ryzo</h3>
-                        <p class="card-title" id="ryzoText">The crypto degen</p>
-                        <div class="card-details">
-                            <span id="price-7">Current market price: ~ ETH</span>
-                            <button class="button-buy"onclick="acquire(7)"> Buy </button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="/Influencers/Fashion.png" alt="Richard" class="card-image">
-                        <h3 class="card-name">Stuart</h3>
-                        <p class="card-title" id="stuartText">The Fashion artist</p>
-                        <div class="card-details">
-                            <span id="price-8">Current market price: ~ ETH</span>
-                            <button class="button-buy"onclick="acquire(8)"> Buy </button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="/Influencers/DegenFemale.png" alt="Richard" class="card-image">
-                        <h3 class="card-name">Amara</h3>
-                        <p class="card-title" id="amaraText">The crypto trader</p>
-                        <div class="card-details">
-                            <span id="price-9">Current market price: ~ ETH</span>
-                            <button class="button-buy"onclick="acquire(9)"> Buy </button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="/Influencers/Ftiness.png" alt="Richard" class="card-image">
-                        <h3 class="card-name" >Kai</h3>
-                        <p class="card-title" id="kaiText">The fitness & health bro</p>
-                        <div class="card-details">
-                            <span id="price-10">Current market price: ~ ETH</span>
-                            <button class="button-buy"onclick="acquire(10)"> Buy </button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="/Influencers/Business.png" alt="Richard" class="card-image">
-                        <h3 class="card-name" >Yusuf</h3>
-                        <p class="card-title"id="yusufText">The business bro</p>
-                        <div class="card-details">
-                            <span id="price-11">Current market price: ~ ETH</span>
-                            <button class="button-buy"onclick="acquire(11)"> Buy </button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="/Influencers/Science.png" alt="Richard" class="card-image">
-                        <h3 class="card-name">Lois</h3>
-                        <p class="card-title" id="loisText">The science expert</p>
-                        <div class="card-details">
-                            <span id="price-12">Current market price: ~ ETH</span>
-                            <button class="button-buy"onclick="acquire(12)"> Buy </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--        -----------------------        -->
-            <!--                About                  -->
-            <div class="aboutSection" id="aboutBody_">
-                <div class="aboutContent">
-                  <h1>About</h1>
-                  <p>
-                    This project uses the concept of Harberger tax applied on-chain to offer a marketplace for influencer's influence.
-                    This mechanism ensures continuous availability and fair valuation, allowing for a dynamic exchange of influence.
-                  </p>
-                  <h2>Harberger Tax</h2>
-                  <p>Harberger Tax is an economic concept designed to encourage the efficient use of assets while ensuring they remain publicly accessible. At its core, asset owners assess their own property value and pay a tax based on this valuation. </p>
-                  <p>The twist? The asset is always for sale at the self-assessed price. In the context of our platform, this means that each NFT, representing influencer influence, is continually available for purchase. Owners declare their value for the NFT and pay a tax accordingly, promoting fair valuation and constant availability. This system fosters an environment where influence is democratized, and the barriers between ownership and accessibility are minimized.</p>
-
-                  <h2>Why partial common ownership & influence?</h2>
-                  <p>The concept of partial common ownership challenges the traditional boundaries of property rights, offering a more fluid and equitable model for asset distribution and management. Applying this model to the realm of influencer's influence is particularly compelling in the era of VTubers and digital personas, where the lines between reality and virtuality blur.</p>
-                  <p>In this landscape, where influencers may not even exist in the conventional sense, partial common ownership ensures that the influence wielded by virtual entities can be democratically managed. This opens up new frontiers for community engagement and collaborative content creation, allowing for a dynamic interplay between creators and their audiences.</p>
-
-                </div>
+            <p class="slogan">
+              Hold NFTs tied to leading warpcast influencers, offering you the
+              opportunity to manage their social media account. These NFTs stand
+              out as they are perpetually available for purchase due to the
+              Harberger tax system.
+            </p>
+          </div>
+        </div>
+        <!--        -----------------------        -->
+        <!--        Influencers Catalogue         -->
+        <div class="influencerSelectionBody">
+          <h1>Choose your influencer</h1>
+          <p class="selectDescription">
+            Select Your Sphere of Influence. From tech visionaries to fitness
+            gurus, find the influencer whose voice speaks to you—and bid to make
+            it your own.
+          </p>
+          <div class="influencerCardsContainer">
+            <div class="card">
+              <img
+                src="/Influencers/Gaming.png"
+                alt="Richard"
+                class="card-image"
+              />
+              <h3 class="card-name">Sophie</h3>
+              <p class="card-title" id="sophieText">The Gamer Girl</p>
+              <div class="card-details">
+                <span id="price-1">Current market price: ~ ETH</span>
+                <button class="button-buy" onclick="acquire(1)">Buy</button>
               </div>
-
-            <!--        -----------------------        -->
-            <!--                FAQ                 -->
-            <div class="FAQBody" id="FAQbody_">
-                <h2>FAQ</h2>
-                <p>Have questions? We've got answers. Explore our FAQ for insights into how Harberger Bid redefines influence ownership, bidding processes, and more</p>
-                <div class="FAQList">
-                    <div class="FAQQuestion">Question 1</div>
-                    <div class="FAQAnswer">Answer 1</div>
-                    <div class="FAQQuestion">Question 2</div>
-                    <div class="FAQAnswer">Answer 2</div>
-                    <div class="FAQQuestion">Question 3</div>
-                    <div class="FAQAnswer">Answer 3</div>
-                </div>
             </div>
+            <div class="card">
+              <img
+                src="/Influencers/Tech.png"
+                alt="Richard"
+                class="card-image"
+              />
+              <h3 class="card-name">Jay</h3>
+              <p class="card-title" id="jayText">The tech head</p>
+              <div class="card-details">
+                <span id="price-2">Current market price: ~ ETH</span>
+                <button class="button-buy" onclick="acquire(2)">Buy</button>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="/Influencers/Apocaliptic.png"
+                alt="Richard"
+                class="card-image"
+              />
+              <h3 class="card-name">Leonard</h3>
+              <p class="card-title" id="leonardText">The survival maximalist</p>
+              <div class="card-details">
+                <span id="price-3">Current market price: ~ ETH</span>
+                <button class="button-buy" onclick="acquire(3)">Buy</button>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="/Influencers/Waifu.png"
+                alt="Richard"
+                class="card-image"
+              />
+              <h3 class="card-name">Lola</h3>
+              <p class="card-title" id="lolaText">The Model</p>
+              <div class="card-details">
+                <span id="price-4">Current market price: ~ ETH</span>
+                <button class="button-buy" onclick="acquire(4)">Buy</button>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="/Influencers/TechFemale.png"
+                alt="Richard"
+                class="card-image"
+              />
+              <h3 class="card-name">Sasha</h3>
+              <p class="card-title" id="sashaText">The Tech influencer</p>
+              <div class="card-details">
+                <span id="price-5">Current market price: ~ ETH</span>
+                <button class="button-buy" onclick="acquire(5)">Buy</button>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="/Influencers/Tradfi.png"
+                alt="Richard"
+                class="card-image"
+              />
+              <h3 class="card-name">Richard</h3>
+              <p class="card-title" id="richardText">The tradfi uncle</p>
+              <div class="card-details">
+                <span id="price-6">Current market price: ~ ETH</span>
+                <button class="button-buy" onclick="acquire(6)">Buy</button>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="/Influencers/DegenMale.png"
+                alt="Richard"
+                class="card-image"
+              />
+              <h3 class="card-name">Ryzo</h3>
+              <p class="card-title" id="ryzoText">The crypto degen</p>
+              <div class="card-details">
+                <span id="price-7">Current market price: ~ ETH</span>
+                <button class="button-buy" onclick="acquire(7)">Buy</button>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="/Influencers/Fashion.png"
+                alt="Richard"
+                class="card-image"
+              />
+              <h3 class="card-name">Stuart</h3>
+              <p class="card-title" id="stuartText">The Fashion artist</p>
+              <div class="card-details">
+                <span id="price-8">Current market price: ~ ETH</span>
+                <button class="button-buy" onclick="acquire(8)">Buy</button>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="/Influencers/DegenFemale.png"
+                alt="Richard"
+                class="card-image"
+              />
+              <h3 class="card-name">Amara</h3>
+              <p class="card-title" id="amaraText">The crypto trader</p>
+              <div class="card-details">
+                <span id="price-9">Current market price: ~ ETH</span>
+                <button class="button-buy" onclick="acquire(9)">Buy</button>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="/Influencers/Ftiness.png"
+                alt="Richard"
+                class="card-image"
+              />
+              <h3 class="card-name">Kai</h3>
+              <p class="card-title" id="kaiText">The fitness & health bro</p>
+              <div class="card-details">
+                <span id="price-10">Current market price: ~ ETH</span>
+                <button class="button-buy" onclick="acquire(10)">Buy</button>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="/Influencers/Business.png"
+                alt="Richard"
+                class="card-image"
+              />
+              <h3 class="card-name">Yusuf</h3>
+              <p class="card-title" id="yusufText">The business bro</p>
+              <div class="card-details">
+                <span id="price-11">Current market price: ~ ETH</span>
+                <button class="button-buy" onclick="acquire(11)">Buy</button>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="/Influencers/Science.png"
+                alt="Richard"
+                class="card-image"
+              />
+              <h3 class="card-name">Lois</h3>
+              <p class="card-title" id="loisText">The science expert</p>
+              <div class="card-details">
+                <span id="price-12">Current market price: ~ ETH</span>
+                <button class="button-buy" onclick="acquire(12)">Buy</button>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!--        -----------------------        -->
+        <!--                About                  -->
+        <div class="aboutSection" id="aboutBody_">
+          <div class="aboutContent">
+            <h1>About</h1>
+            <p>
+              This project uses the concept of Harberger tax applied on-chain to
+              offer a marketplace for influencer's influence. This mechanism
+              ensures continuous availability and fair valuation, allowing for a
+              dynamic exchange of influence.
+            </p>
+            <h2>Harberger Tax</h2>
+            <p>
+              Harberger Tax is an economic concept designed to encourage the
+              efficient use of assets while ensuring they remain publicly
+              accessible. At its core, asset owners assess their own property
+              value and pay a tax based on this valuation.
+            </p>
+            <p>
+              The twist? The asset is always for sale at the self-assessed
+              price. In the context of our platform, this means that each NFT,
+              representing influencer influence, is continually available for
+              purchase. Owners declare their value for the NFT and pay a tax
+              accordingly, promoting fair valuation and constant availability.
+              This system fosters an environment where influence is
+              democratized, and the barriers between ownership and accessibility
+              are minimized.
+            </p>
+
+            <h2>Why partial common ownership & influence?</h2>
+            <p>
+              The concept of partial common ownership challenges the traditional
+              boundaries of property rights, offering a more fluid and equitable
+              model for asset distribution and management. Applying this model
+              to the realm of influencer's influence is particularly compelling
+              in the era of VTubers and digital personas, where the lines
+              between reality and virtuality blur.
+            </p>
+            <p>
+              In this landscape, where influencers may not even exist in the
+              conventional sense, partial common ownership ensures that the
+              influence wielded by virtual entities can be democratically
+              managed. This opens up new frontiers for community engagement and
+              collaborative content creation, allowing for a dynamic interplay
+              between creators and their audiences.
+            </p>
+          </div>
+        </div>
+
+        <!--        -----------------------        -->
+        <!--                FAQ                 -->
+        <div class="FAQBody" id="FAQbody_">
+          <h2>FAQ</h2>
+          <p>
+            Have questions? We've got answers. Explore our FAQ for insights into
+            how Harberger Bid redefines influence ownership, bidding processes,
+            and more
+          </p>
+          <div class="FAQList">
+            <div class="FAQQuestion">Question 1</div>
+            <div class="FAQAnswer">Answer 1</div>
+            <div class="FAQQuestion">Question 2</div>
+            <div class="FAQAnswer">Answer 2</div>
+            <div class="FAQQuestion">Question 3</div>
+            <div class="FAQAnswer">Answer 3</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script>
-        document.getElementById('btnAbout').addEventListener('click', function() {
-            document.getElementById('aboutBody_').scrollIntoView({ behavior: 'smooth' });
+      document
+        .getElementById("btnAbout")
+        .addEventListener("click", function () {
+          document
+            .getElementById("aboutBody_")
+            .scrollIntoView({ behavior: "smooth" });
         });
 
-        document.getElementById('btnFAQ').addEventListener('click', function() {
-            document.getElementById('FAQbody_').scrollIntoView({ behavior: 'smooth' });
+      document.getElementById("btnFAQ").addEventListener("click", function () {
+        document
+          .getElementById("FAQbody_")
+          .scrollIntoView({ behavior: "smooth" });
+      });
+
+      const faqQuestions = document.querySelectorAll(".FAQQuestion");
+
+      faqQuestions.forEach((question) => {
+        question.addEventListener("click", () => {
+          const answer = question.nextElementSibling;
+
+          // Toggle de la clase 'active' en la pregunta
+          question.classList.toggle("active");
+
+          // Toggle de la respuesta
+          if (answer.style.display === "block") {
+            answer.style.display = "none";
+          } else {
+            answer.style.display = "block";
+          }
         });
-
-        const faqQuestions = document.querySelectorAll('.FAQQuestion');
-
-faqQuestions.forEach(question => {
-    question.addEventListener('click', () => {
-        const answer = question.nextElementSibling;
-
-        // Toggle de la clase 'active' en la pregunta
-        question.classList.toggle('active');
-
-        // Toggle de la respuesta
-        if (answer.style.display === 'block') {
-            answer.style.display = 'none';
-        } else {
-            answer.style.display = 'block';
-        }
-    });
-});
+      });
     </script>
-</body>
-
+  </body>
 </html>
