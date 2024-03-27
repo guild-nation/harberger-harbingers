@@ -433,7 +433,7 @@ body {
 /*------------------------------*/
 /*       About         */
 .aboutSection {
-  background-image: url("/SloganImage_.png");
+  background-image: url("about.png");
   background-size: cover;
   background-position: center;
   padding: 50px; /* Adjust padding as needed */
